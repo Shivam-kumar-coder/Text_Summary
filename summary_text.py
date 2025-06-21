@@ -1,5 +1,5 @@
 import streamlit as st 
-from transformers import pipeline,set_seed
+from transformers import pipeline, set_seed
 
 @st.cache_resource
 def summar():
@@ -12,6 +12,7 @@ b=st.button(" View Summary")
 if b:
   if i:
     with st.spinner(" Generating Summary ✍ ...."):
+      set_seed(42)
       result=gen(i,max_length=l,num_sequences=1)
       st.success("#### Genterated Summary ####")
       st.write(result[0])
