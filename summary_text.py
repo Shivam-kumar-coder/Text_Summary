@@ -12,7 +12,7 @@ l=st.slider("Choose max lenght Word of summary",30,200,40,step=5)
 if i:
   with st.spinner(" Generating Summary ✍ ...."):
     set_seed(42)
-    result=gen(i,max_length=l,num_sequences=1)
+    result=gen(i,max_length=l,num_return_sequences=1)
     st.success("#### Genterated Summary ####")
     st.write(result[0])
 else:
