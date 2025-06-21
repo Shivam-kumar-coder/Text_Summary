@@ -14,7 +14,7 @@ if i:
     set_seed(42)
     result=gen(i,max_length=l,num_return_sequences=1)
     st.success("#### Genterated Summary ####")
-    st.write(result[0]['summary_text"])
+    st.write(result[0]['summary_text'])
 else:
   st.info("Please Enter Sentences")
     
